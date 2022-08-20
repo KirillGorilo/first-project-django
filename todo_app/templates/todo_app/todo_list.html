@@ -13,21 +13,29 @@
                 <div>
                     <div
                         role="button"
-                        onclick="location.href='#'">
+                        onclick="location.href=
+                        '{% url "item-update" todo_list.id todo.id %}'">
                         {{ todo.title }}
                         (Due {{ todo.due_date | date:"l, F j" }})
                     </div>
                 </div>
             </li>
             {% empty %}
-            <p>There are no to-do items in this list.</p>
+            <p>Нет доступных списков.</p>
             {% endfor %}
         </ul>
         <p>
             <input
                 value="Добавить новый список"
                 type="button"
-                onclick="location.href='#'" />
+                  onclick="location.href='{% url "item-add" todo_list.id %}'"
+            />
+             <input
+                value="Удалить этот список"
+                type="button"
+                onclick="location.href=
+                '{% url "list-delete" todo_list.id %}'"
+            />
         </p>
     </div>
 </div>
