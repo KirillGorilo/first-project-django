@@ -10,7 +10,7 @@
 Скачиваем python с официального сайта, далее устанавливаем.
 После того как питон будет установлен скачивает django командой: pip install django.
 В cmd переходим в архив проекта.
-И запускаем приложуху командой: python manage.py runserver
+Выполняем команду python manage.py migrate, и запускаем приложуху командой: python manage.py runserver
 При выводе командная стровка выдаст: Starting development server at http://127.0.0.1:8000/ нажимаем на адрес 
 
 ВУАЛЯЯ
