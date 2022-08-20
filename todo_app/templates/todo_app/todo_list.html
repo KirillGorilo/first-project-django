@@ -4,7 +4,7 @@
 <div>
     <div>
         <div>
-            <h3>Выбрать список:</h3>
+            <h3>Edit list:</h3>
             <h5>{{ todo_list.title | upper }}</h5>
         </div>
         <ul>
@@ -21,21 +21,20 @@
                 </div>
             </li>
             {% empty %}
-            <p>Нет доступных списков.</p>
+            <p>В этом списке нет дел.</p>
             {% endfor %}
         </ul>
         <p>
             <input
-                value="Добавить новый список"
+                value="Добавить новую тему"
                 type="button"
-                  onclick="location.href='{% url "item-add" todo_list.id %}'"
-            />
-             <input
+                onclick="location.href=
+                '{% url "item-add" todo_list.id %}'" />
+            <input
                 value="Удалить этот список"
                 type="button"
                 onclick="location.href=
-                '{% url "list-delete" todo_list.id %}'"
-            />
+                '{% url "list-delete" todo_list.id %}'" />
         </p>
     </div>
 </div>

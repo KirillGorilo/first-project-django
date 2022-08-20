@@ -4,16 +4,16 @@
 
 <h3>Delete To-do Item</h3>
 
-<p>Are you sure you want to delete the item: <b>{{ object.title }}</b>
-   from the list <i>{{ todo_list.title }}</i>?</p>
+<p>Вы уверенны что хотите удалить: <b>{{ object.title }}</b>
+   из списка <i>{{ todo_list.title }}</i>?</p>
 
 <form method="POST">
     {% csrf_token %}
     <input
-        value="Yes, delete."
+        value="Да"
         type="submit">
     <input
-        value="Cancel"
+        value="Отмена"
         type="button"
         onclick="location.href='{% url "list" todo_list.id %}';">
 </form>

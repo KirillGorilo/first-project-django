@@ -10,11 +10,11 @@
 <form method="POST">
     {% csrf_token %}
     <input
-        value="Yes, delete."
+        value="Да, удалить."
         type="submit">
 </form>
 <input
-    value="Cancel"
+    value="Отмена"
     type="button"
     onclick="location.href='{% url "index" %}';">
 

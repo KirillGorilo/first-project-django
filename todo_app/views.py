@@ -7,6 +7,7 @@ from django.views.generic import (
 )
 from .models import ToDoItem, ToDoList
 
+
 class ListListView(ListView):
     model = ToDoList
     template_name = 'todo_app/index.html'
@@ -84,6 +85,7 @@ class ListDelete(DeleteView):
     model = ToDoList
     success_url = reverse_lazy("index")
 
+
 class ItemDelete(DeleteView):
     model = ToDoItem
 
@@ -92,5 +94,5 @@ class ItemDelete(DeleteView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['todo_list'] = self.object.todo_list
+        context["todo_list"] = self.object.todo_list
         return context

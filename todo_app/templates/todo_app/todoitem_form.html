@@ -12,12 +12,12 @@
         value="Submit"
         type="submit">
     <input
-        value="Cancel"
+        value="Отмена"
         type="button"
         onclick="location.href='{% url "list" todo_list.id %}'">
     {% if object %}
         <input
-            value="Delete this item"
+            value="Удалить эту тему"
             type="button"
             onclick="location.href=
             '{% url "item-delete" todo_list.id object.id %}'">
